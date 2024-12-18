@@ -25,28 +25,28 @@
   @apply bg-no-repeat;
 }
 .DateInput_input {
-  @apply mt-2 w-full cursor-pointer appearance-none rounded border-t border-l border-r border-b border-solid bg-black py-2 px-3 pl-8 text-sm font-light leading-tight text-white shadow transition duration-300;
+  @apply mt-2 w-full cursor-pointer appearance-none rounded border-t border-l border-r border-b border-solid bg-black-main  py-2 px-3 pl-8 text-sm font-light leading-tight text-white shadow transition duration-300;
   border-color: #ff4d4d;
 }
 .DateInput_input:hover {
-  @apply border-red-600;
+  @apply border-red-light;
 }
 .DateInput_input:focus {
-  @apply border-red-600 outline-none;
+  @apply border-red-light outline-none;
 }
 /** FIRST INPUT STYLES **/
 .DateInput:first-child .DateInput_input {
-  @apply rounded-r-none border-red-500;
+  @apply rounded-r-none border-red-light;
 }
 
 .DateInput:first-child .DateInput_input:hover,
 .DateInput:first-child .DateInput_input:focus {
-  @apply relative z-10 border-red-600;
+  @apply relative z-10 border-red-main;
 }
 
 /** SECOND INPUT STYLES **/
 .DateInput:last-child .DateInput_input {
-  @apply rounded-l-none border-red-500;
+  @apply rounded-l-none border-red-light;
   margin-left: -1px;
 }
 
@@ -57,7 +57,7 @@
 
 /* SELECT MONTH PICKER */
 .DateRangePicker_select {
-  @apply text-red-500 border-red-500 cursor-pointer appearance-none rounded border bg-black py-1 pl-2 pr-5 text-base;
+  @apply text-red-light border-red-main cursor-pointer appearance-none rounded border bg-black-main py-1 pl-2 pr-5 text-base;
   background-image: linear-gradient(45deg, transparent 50%, #ff4d4d 50%),
     linear-gradient(135deg, #ff4d4d 50%, transparent 50%);
   background-position:
@@ -71,32 +71,32 @@
 }
 /* CALENDAR DAYS */
 .CalendarDay {
-  @apply rounded-full border-0 text-white bg-black;
+  @apply rounded-full border-0 text-white bg-black-main;
 }
 
 .CalendarDay:hover,
 .CalendarDay__selected,
 .CalendarDay__selected:active,
 .CalendarDay__selected:hover {
-  @apply bg-red-500 border-red-500 text-white;
+  @apply bg-black-main border-red-light text-white;
 }
 
 .CalendarDay__blocked_out_of_range:hover {
-  @apply text-gray-500 cursor-not-allowed border-0 bg-black;
+  @apply text-gray-500 cursor-not-allowed border-0 bg-black-main;
 }
 
 .CalendarDay__selected_span {
-  @apply bg-red-400 border-0;
+  @apply bg-red-active border-0;
 }
 
 /* MONTH NAVIGATION BUTTONS */
 .DayPickerNavigation_button__horizontalDefault,
 .DayPickerNavigation_button__horizontalDefault:hover {
-  @apply border-red-500 text-red-500;
+  @apply border-red-light text-black-main;
   top: 24px;
   padding: 3px 9px;
   background-color: black;
 }
 .DayPickerNavigation_svg__horizontal {
-  @apply fill-current text-red-500;
+  @apply fill-current text-red-light;
 }

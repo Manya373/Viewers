@@ -7,15 +7,15 @@
 }
 
 .shepherd-content {
-  @apply flex flex-col gap-[8px] p-[12px] bg-black text-white;
+  @apply flex flex-col gap-[8px] p-[12px] bg-black-main  text-red-active;
 }
 
 .shepherd-element {
-  @apply bg-black max-w-[260px] border border-red-600;
+  @apply bg-black-main max-w-[260px] border border-red-main;
 }
 
 .shepherd-text {
-  @apply text-white w-[100%] p-0 text-lg leading-normal;
+  @apply text-red-main w-[100%] p-0 text-lg leading-normal;
 }
 
 .shepherd-footer {
@@ -25,18 +25,18 @@
 .shepherd-button {
   @apply inline-flex h-[36px] min-w-[62px] flex-row items-center
   justify-center gap-[5px] whitespace-nowrap rounded
-  bg-red-600 px-[10px] text-center font-sans text-[14px]
-  leading-[1.2] text-white outline-none transition duration-300
-  ease-in-out hover:bg-red-700 focus:outline-none;
+  bg-black-main px-[10px] text-center font-sans text-[14px]
+  leading-[1.2] text-red-light outline-none transition duration-300
+  ease-in-out hover:bg-red-hover focus:outline-none;
 }
 
 .shepherd-button.shepherd-button-secondary {
-  @apply bg-transparent text-red-500 border border-red-500
-  hover:bg-red-700 hover:text-white;
+  @apply bg-black-light text-red-light border border-red-main
+  hover:bg-red-hover hover:text-white;
 }
 
 .shepherd-arrow::before {
-  @apply bg-black h-[30px] w-[30px] border-t border-l border-red-600;
+  @apply bg-black-main h-[30px] w-[30px] border-t border-l border-red-light;
 }
 
 .shepherd-element[data-popper-placement^='left'] > .shepherd-arrow {
@@ -49,5 +49,5 @@
 }
 
 .shepherd-modal-overlay-container.shepherd-modal-is-visible {
-  @apply opacity-70 bg-black;
+  @apply opacity-70 bg-black-main;
 }

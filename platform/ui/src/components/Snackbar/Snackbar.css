@@ -45,11 +45,18 @@
 .sb-item {
   animation: fadein 1s;
   box-shadow:
-    0 6px 10px 0 rgba(255, 0, 0, 0.2), /* Red shadow */
+    0 6px 10px 0 rgba(12, 11, 11, 0.2), /* Dark shadow */
     0 1px 18px 0 rgba(255, 0, 0, 0.12),
     0 3px 5px -1px rgba(255, 0, 0, 0.14);
-  @apply transition-height relative overflow-hidden rounded-md p-3 bg-black text-red-500 duration-300 ease-in-out;
+  @apply transition-all relative overflow-hidden rounded-md p-3 bg-black-main text-red-light duration-300 ease-in-out;
 }
+
+/* Hover state with dark red background */
+.sb-item:hover {
+  @apply bg-red-main; /* Dark red background on hover */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for background */
+}
+
 
 @keyframes fadein {
   from {

@@ -1,9 +1,9 @@
 .customSelect__wrapper .customSelect__control {
-  @apply border-red-600 w-full rounded border bg-black text-sm leading-tight text-white shadow transition duration-300;
+  @apply border-red-main w-full rounded border bg-black-main text-sm leading-tight text-white shadow transition duration-300;
   min-height: 28px;
 }
 .customSelect__wrapper .customSelect__control:hover {
-  @apply border-red-400;
+  @apply border-black-light;
 }
 
 .customSelect__control {
@@ -23,7 +23,7 @@
 
 .customSelect__wrapper .customSelect__control:focus,
 .customSelect__wrapper .customSelect__control--menu-is-open {
-  @apply border-red-400 outline-none;
+  @apply border-red-active outline-none;
 }
 
 .customSelect--is-disabled .customSelect__control--is-disabled {
@@ -55,7 +55,7 @@
 }
 
 .customSelect__wrapper .customSelect__single-value {
-  @apply text-red-500 pl-1;
+  @apply text-red-active pl-1;
   max-width: calc(100% - 20px);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -86,7 +86,7 @@
   border-radius: 10px;
 }
 .customSelect__menu-portal .customSelect__placeholder {
-  @apply text-red-500 pl-1.5;
+  @apply text-black-main pl-1.5;
 }
 
 .customSelect__menu-portal .customSelect__menu-list::-webkit-scrollbar-thumb {

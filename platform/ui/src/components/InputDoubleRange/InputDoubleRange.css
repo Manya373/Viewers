@@ -1,4 +1,4 @@
 .input-range-thumb-design {
-  @apply bg-primary-light border-primary-dark border-[2px] border-solid;
+  @apply bg-red-active border-red-main border-[2px] border-solid;
   border-radius: 50%;
 }
