@@ -1,6 +1,6 @@
 /* CUSTOM OHIF SCROLLBAR */
 .ohif-scrollbar {
-  scrollbar-color: #173239 transparent;
+  scrollbar-color: #b30000 transparent; /* Red thumb with transparent track */
   overflow-y: auto;
 }
 
@@ -17,22 +17,26 @@
 }
 
 .ohif-scrollbar::-webkit-scrollbar {
-  scrollbar-width: thin;
+  width: 8px; /* Thin scrollbar */
+  height: 8px;
 }
 
 .ohif-scrollbar::-webkit-scrollbar-track {
   @apply rounded;
+  background-color: #0a0a0a; /* Black track */
 }
 
 .ohif-scrollbar::-webkit-scrollbar-thumb {
   @apply rounded;
-  @apply bg-secondary-dark;
-  background-color: #041c4a;
+  background-color: #b30000; /* Red thumb */
+}
+
+.ohif-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #ff4d4d; /* Lighter red thumb on hover */
 }
 
 .ohif-scrollbar::-webkit-scrollbar-thumb:window-inactive {
-  @apply bg-secondary-dark;
-  background-color: #041c4a;
+  background-color: #8b0000; /* Darker red thumb when inactive */
 }
 
 /* INVISIBLE SCROLLBAR */

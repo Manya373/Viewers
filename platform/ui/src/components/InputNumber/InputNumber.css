@@ -1,33 +1,56 @@
-input[type='text'] {
+/* General input styling */
+input[type='text'],
+input[type='number'] {
   -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+  background-color: #0a0a0a; /* Black background */
+  color:grey; /* Red text */
+  border: 1px solid #8b0000; /* Dark red border */
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* For most modern browsers */
+/* Remove spin buttons in modern browsers */
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* For Firefox */
-input[type='number'] {
-  -moz-appearance: textfield;
-}
-
-.input-number:focus {
-  border: none;
+/* Focus state */
+.input-number:focus,
+input[type='text']:focus,
+input[type='number']:focus {
   outline: none;
+  border-color: #ff1a1a; /* Bright red border */
+  box-shadow: 0 0 5px rgba(255, 77, 77, 0.7); /* Red glow effect */
 }
 
+/* Small input */
+.input-small {
+  height: 26px;
+  background-color: #0a0a0a; /* Black background */
+  color:grey; /* Red text */
+  border: 1px solid #8b0000; /* Dark red border */
+}
+
+/* Up arrow size */
 .up-arrowsize svg {
   width: 7px;
   height: 7px;
 }
 
 .up-arrowsize svg path {
-  fill: #726f7e;
+  fill: #ff4d4d; /* Red for arrow paths */
 }
 
-.input-small {
-  height: 26px;
+/* Disabled state */
+input:disabled {
+  background-color: #1a1a1a; /* Darker black for disabled */
+  color: grey; /* Dark red text */
+  border-color: #3b0b0b; /* Muted red border */
+  cursor: not-allowed;
 }

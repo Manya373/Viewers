@@ -1,37 +1,42 @@
 .shepherd-header {
-  @apply !bg-popover !w-[100%] !p-0;
+  @apply bg-[#000000] w-[100%] p-0;
 }
 
 .shepherd-title {
-  @apply !text-highlight !w-[100%] !break-words !text-xl !leading-[1.5];
+  @apply text-red-main w-[100%] break-words text-xl leading-[1.5];
 }
 
 .shepherd-content {
-  @apply flex flex-col gap-[8px] p-[12px];
+  @apply flex flex-col gap-[8px] p-[12px] bg-black text-white;
 }
 
 .shepherd-element {
-  @apply !bg-popover !max-w-[260px];
+  @apply bg-black max-w-[260px] border border-red-600;
 }
 
 .shepherd-text {
-  @apply text-foreground !w-[100%] p-0 text-lg leading-normal;
+  @apply text-white w-[100%] p-0 text-lg leading-normal;
 }
 
 .shepherd-footer {
-  @apply !w-[100%] p-0;
+  @apply w-[100%] p-0;
 }
 
 .shepherd-button {
-  @apply !inline-flex !h-[36px] !min-w-[62px] !flex-row !items-center !justify-center !gap-[5px] !whitespace-nowrap !rounded !bg-[#348cfd] !px-[10px] !text-center !font-sans !text-[14px] !leading-[1.2] !text-white !outline-none !transition !duration-300 !ease-in-out focus:!outline-none;
+  @apply inline-flex h-[36px] min-w-[62px] flex-row items-center
+  justify-center gap-[5px] whitespace-nowrap rounded
+  bg-red-600 px-[10px] text-center font-sans text-[14px]
+  leading-[1.2] text-white outline-none transition duration-300
+  ease-in-out hover:bg-red-700 focus:outline-none;
 }
 
 .shepherd-button.shepherd-button-secondary {
-  @apply !bg-transparent !text-[#348cfd];
+  @apply bg-transparent text-red-500 border border-red-500
+  hover:bg-red-700 hover:text-white;
 }
 
 .shepherd-arrow::before {
-  @apply !bg-popover !h-[30px] !w-[30px];
+  @apply bg-black h-[30px] w-[30px] border-t border-l border-red-600;
 }
 
 .shepherd-element[data-popper-placement^='left'] > .shepherd-arrow {
@@ -44,5 +49,5 @@
 }
 
 .shepherd-modal-overlay-container.shepherd-modal-is-visible {
-  @apply !opacity-70;
+  @apply opacity-70 bg-black;
 }

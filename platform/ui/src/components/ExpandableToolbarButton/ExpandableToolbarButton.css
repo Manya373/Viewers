@@ -4,7 +4,7 @@
   bottom: -10px;
   border-width: 10px 10px 0;
   border-style: solid;
-  border-color: #5acce6 transparent;
+  border-color: #ff0000 transparent; /* Red arrow */
 }
 
 .ExpandableToolbarButton .ExpandableToolbarButton__content {
@@ -13,4 +13,9 @@
 
 .ExpandableToolbarButton:hover .ExpandableToolbarButton__content {
   display: block;
+  background-color: #000000; /* Black background for the expanded content */
+  color: #ff0000; /* Red text color */
+  border: 1px solid #ff0000; /* Red border */
+  padding: 5px; /* Optional: Add some spacing inside */
+  border-radius: 5px; /* Optional: Smooth rounded corners */
 }

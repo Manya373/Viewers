@@ -4,8 +4,22 @@
   align-items: center;
   flex-shrink: 0;
   line-height: 18px;
+  background-color: #1a1a1a; /* Black background for the menu item */
+  color: #ff4d4d; /* Red text color */
+  border: 1px solid #8b0000; /* Dark red border */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
 .all-in-one-menu-item-effects {
-  @apply cursor-pointer hover:bg-primary-dark hover:rounded;
+  @apply cursor-pointer hover:bg-[#ff1a1a] hover:text-white hover:rounded; /* Hover effect */
+  background-color: transparent; /* Transparent background by default */
+  color: #ff4d4d; /* Red text */
+}
+
+/* Hover effect for menu items */
+.all-in-one-menu-item-effects:hover {
+  background-color: #ff1a1a; /* Bright red background on hover */
+  color: white; /* White text on hover */
+  border-color: #ff1a1a; /* Bright red border on hover */
 }

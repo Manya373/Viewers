@@ -1,9 +1,9 @@
 .customSelect__wrapper .customSelect__control {
-  @apply border-secondary-light w-full rounded border bg-black text-sm leading-tight text-white shadow transition duration-300;
+  @apply border-red-600 w-full rounded border bg-black text-sm leading-tight text-white shadow transition duration-300;
   min-height: 28px;
 }
 .customSelect__wrapper .customSelect__control:hover {
-  @apply border-gray-500;
+  @apply border-red-400;
 }
 
 .customSelect__control {
@@ -23,7 +23,7 @@
 
 .customSelect__wrapper .customSelect__control:focus,
 .customSelect__wrapper .customSelect__control--menu-is-open {
-  @apply border-gray-500 outline-none;
+  @apply border-red-400 outline-none;
 }
 
 .customSelect--is-disabled .customSelect__control--is-disabled {
@@ -42,8 +42,8 @@
   padding: 4px;
 }
 
- .customSelect__option {
-  color: #d6d6d6 !important;
+.customSelect__option {
+  color: #e6e6e6 !important; /* Light gray text for options */
   font-size: 14px !important;
   display: flex !important;
   align-items: center !important;
@@ -55,7 +55,7 @@
 }
 
 .customSelect__wrapper .customSelect__single-value {
-  @apply text-aqua-pale pl-1;
+  @apply text-red-500 pl-1;
   max-width: calc(100% - 20px);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -86,26 +86,26 @@
   border-radius: 10px;
 }
 .customSelect__menu-portal .customSelect__placeholder {
-  @apply text-aqua-pale pl-1.5;
+  @apply text-red-500 pl-1.5;
 }
 
 .customSelect__menu-portal .customSelect__menu-list::-webkit-scrollbar-thumb {
-  background-color: #0944b3;
+  background-color: #b30000; /* Red scrollbar thumb */
   border-radius: 10px;
 }
 
 .customSelect__option--is-focused {
-  background-color: #0944b391 !important;
+  background-color: #b3000091 !important; /* Red with transparency */
 }
 
 .customSelect__menu-portal .customSelect__option:hover {
-  background-color: #0944b391;
+  background-color: #b3000091; /* Red hover effect */
 }
 
 .customSelect__menu-portal .customSelect__menu {
-  border: 2px solid #0944b3;
+  border: 2px solid #b30000; /* Red border */
   border-radius: 6px;
-  background-color: #151515 !important;
+  background-color: #151515 !important; /* Dark black background */
 }
 
 .css-1hwfws3 {

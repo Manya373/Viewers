@@ -1,83 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+
 /* OHIF Theme */
 
 @layer base {
   :root {
-    --highlight: 191 74% 63%;
-    --background: 236 62% 5%;
-    --foreground: 0 0% 98%;
-    --card: 234 64% 10%;
-    --card-foreground: 0 0% 98%;
-    --popover: 219 90% 15%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 214 98% 60%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 214 66% 48%;
-    --secondary-foreground: 200 50% 84%;
-    --muted: 234 64% 10%;
-    --muted-foreground: 200 46% 65%;
-    --accent: 217 79% 24%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 236 45% 21%;
-    --ring: 214 98% 60%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --radius: 0.5rem;
-    --success-bg: hsl(143, 85%, 96%);
-    --success-border: hsl(145, 92%, 91%);
-    --success-text: hsl(140, 100%, 27%);
+    /* Red and Black Color Scheme */
+    --highlight: 0 100% 50%; /* Red Highlight */
+    --background: 0 0% 10%; /* Black Background */
+    --foreground: 0 0% 100%; /* White Text */
+    --card: 0 0% 15%; /* Dark Card Background */
+    --card-foreground: 0 0% 100%; /* White Card Text */
+    --popover: 0 0% 10%; /* Dark Popover Background */
+    --popover-foreground: 0 0% 100%; /* White Popover Text */
+    --primary: 0 100% 50%; /* Red Primary Color */
+    --primary-foreground: 0 0% 100%; /* White Primary Text */
+    --secondary: 0 50% 40%; /* Dark Red Secondary Color */
+    --secondary-foreground: 0 0% 100%; /* White Secondary Text */
+    --muted: 0 0% 20%; /* Muted Black */
+    --muted-foreground: 0 0% 80%; /* Light Gray Text */
+    --accent: 0 100% 40%; /* Red Accent Color */
+    --accent-foreground: 0 0% 100%; /* White Accent Text */
+    --destructive: 0 100% 40%; /* Red Destructive Color */
+    --destructive-foreground: 0 0% 100%; /* White Destructive Text */
+    --border: 0 0% 30%; /* Dark Border */
+    --input: 0 0% 20%; /* Dark Input Background */
+    --ring: 0 100% 50%; /* Red Ring Color */
+    --chart-1: 0 100% 50%; /* Red Chart Color */
+    --chart-2: 0 60% 45%; /* Dark Red Chart Color */
+    --chart-3: 0 80% 55%; /* Bright Red Chart Color */
+    --chart-4: 0 40% 60%; /* Darker Red Chart Color */
+    --chart-5: 0 50% 55%; /* Red Chart Color */
+    --radius: 0.5rem; /* Rounded Corners */
 
-    --info-bg: hsl(208, 100%, 97%);
-    --info-border: hsl(221, 91%, 91%);
-    --info-text: hsl(210, 92%, 45%);
+    --success-bg: hsl(143, 85%, 96%); /* Green Success Background */
+    --success-border: hsl(145, 92%, 91%); /* Green Success Border */
+    --success-text: hsl(140, 100%, 27%); /* Green Success Text */
 
-    --warning-bg: hsl(49, 100%, 97%);
-    --warning-border: hsl(49, 91%, 91%);
-    --warning-text: hsl(31, 92%, 45%);
+    --info-bg: hsl(208, 100%, 97%); /* Blue Info Background */
+    --info-border: hsl(221, 91%, 91%); /* Blue Info Border */
+    --info-text: hsl(210, 92%, 45%); /* Blue Info Text */
 
-    --error-bg: hsl(359, 100%, 97%);
-    --error-border: hsl(359, 100%, 94%);
-    --error-text: hsl(360, 100%, 45%);
+    --warning-bg: hsl(49, 100%, 97%); /* Yellow Warning Background */
+    --warning-border: hsl(49, 91%, 91%); /* Yellow Warning Border */
+    --warning-text: hsl(31, 92%, 45%); /* Yellow Warning Text */
+
+    --error-bg: hsl(359, 100%, 97%); /* Red Error Background */
+    --error-border: hsl(359, 100%, 94%); /* Red Error Border */
+    --error-text: hsl(360, 100%, 45%); /* Red Error Text */
   }
 
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 234 64% 10%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 214 98% 60%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 236 45% 21%;
-    --ring: 214 98% 60%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --background: 0 0% 5%; /* Darker Black Background for Dark Mode */
+    --foreground: 0 0% 95%; /* Light Foreground Text */
+    --card: 0 0% 10%; /* Dark Card Background */
+    --card-foreground: 0 0% 100%; /* White Card Text */
+    --popover: 0 0% 10%; /* Dark Popover Background */
+    --popover-foreground: 0 0% 100%; /* White Popover Text */
+    --primary: 0 100% 50%; /* Red Primary Color */
+    --primary-foreground: 0 0% 100%; /* White Primary Text */
+    --secondary: 0 50% 40%; /* Dark Red Secondary Color */
+    --secondary-foreground: 0 0% 100%; /* White Secondary Text */
+    --muted: 0 0% 20%; /* Muted Black */
+    --muted-foreground: 0 0% 80%; /* Light Gray Text */
+    --accent: 0 100% 40%; /* Red Accent Color */
+    --accent-foreground: 0 0% 100%; /* White Accent Text */
+    --destructive: 0 100% 40%; /* Red Destructive Color */
+    --destructive-foreground: 0 0% 100%; /* White Destructive Text */
+    --border: 0 0% 30%; /* Dark Border */
+    --input: 0 0% 20%; /* Dark Input Background */
+    --ring: 0 100% 50%; /* Red Ring Color */
+    --chart-1: 0 100% 50%; /* Red Chart Color */
+    --chart-2: 0 60% 45%; /* Dark Red Chart Color */
+    --chart-3: 0 80% 55%; /* Bright Red Chart Color */
+    --chart-4: 0 40% 60%; /* Darker Red Chart Color */
+    --chart-5: 0 50% 55%; /* Red Chart Color */
   }
 }
+
 
 /* ORIGINAL THEME for comparison and testing
 
@@ -212,7 +218,7 @@
   }
 
   body {
-    @apply !bg-black;
+    @apply bg-black-main;
   }
 }
 

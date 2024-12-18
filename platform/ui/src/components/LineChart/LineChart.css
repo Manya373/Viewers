@@ -1,24 +1,24 @@
 .LineChart svg {
-  color: #ddd;
-  border: solid 1px #383f42;
+  color: #ff4d4d; /* Red color for overall chart elements */
+  border: solid 1px #1a1a1a; /* Dark black border */
 }
 
 .LineChart svg .background {
   stroke: none;
-  fill: #151c20;
+  fill: #0a0a0a; /* Black background */
 }
 
 .LineChart svg .axis.label {
-  fill: #ddd;
+  fill: #ff4d4d; /* Red axis labels */
   font-size: 12px;
 }
 
 .LineChart svg .axis .tick line {
-  stroke: #ddd;
+  stroke: #8b0000; /* Dark red for axis ticks */
 }
 
 .LineChart svg .axis .tick text {
-  fill: #ddd;
+  fill: #ff4d4d; /* Red axis tick text */
 }
 
 .LineChart svg .axis.grid .domain {
@@ -26,15 +26,16 @@
 }
 
 .LineChart svg .axis.grid .tick line {
-  stroke: #383f42;
+  stroke: #330000; /* Subtle dark red for gridlines */
 }
 
 .LineChart svg .line {
-  stroke-width: 1px;
+  stroke: #ff1a1a; /* Bright red line for the chart */
+  stroke-width: 2px;
   fill: none;
 }
 
 .LineChart svg .legend .legend-background {
   fill: none;
-  stroke: #383f42;
+  stroke: #8b0000; /* Dark red legend border */
 }

@@ -5,34 +5,54 @@
   pointer-events: none;
   font-size: 15px;
   line-height: 18px;
+  color: #ff4d4d; /* Red text color */
 }
+
 .ViewportOrientationMarkers .orientation-marker {
   position: absolute;
+  background-color: #1a1a1a; /* Black background for markers */
+  border: 2px solid #ff4d4d; /* Red border for markers */
+  border-radius: 4px; /* Rounded corners */
+  color: #ff4d4d; /* Red text inside the markers */
+  padding: 5px;
 }
+
 .ViewportOrientationMarkers .top-mid {
   top: 0.6rem;
   left: 50%;
 }
+
 .ViewportOrientationMarkers .left-mid {
   top: 47%;
   left: 5px;
 }
+
 .ViewportOrientationMarkers .right-mid {
   top: 47%;
   left: calc(100% - var(--marker-width) - var(--scrollbar-width));
 }
+
 .ViewportOrientationMarkers .bottom-mid {
   top: calc(100% - var(--marker-height) - 0.6rem);
   left: 47%;
 }
+
 .ViewportOrientationMarkers .right-mid .orientation-marker-value {
   display: flex;
   justify-content: flex-end;
   min-width: var(--marker-width);
 }
+
 .ViewportOrientationMarkers .bottom-mid .orientation-marker-value {
   display: flex;
   justify-content: flex-start;
   min-height: var(--marker-height);
   flex-direction: column-reverse;
+}
+
+/* Add hover effects */
+.ViewportOrientationMarkers .orientation-marker:hover {
+  background-color: #ff1a1a; /* Bright red on hover */
+  border-color: #ff1a1a; /* Bright red border on hover */
+  color: white; /* White text on hover */
 }

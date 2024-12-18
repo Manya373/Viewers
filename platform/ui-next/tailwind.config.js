@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
   presets: [require('../ui/tailwind.config.js')],
   content: [
@@ -19,16 +19,11 @@ module.exports = {
       base: '0.8125rem', // 13px
       lg: '0.875rem', // 14px
       xl: '1rem', // 16px
-      // 2xl and above will be updated in an upcoming version
       '2xl': '1.5rem',
       '3xl': '1.875rem',
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
-      // '2xl': '1.125rem', // 18px
-      // '3xl': '1.375rem', // 22px
-      // '4xl': '1.5rem', // 24px
-      // '5xl': '1.875rem', // 30px
     },
     fontWeight: {
       hairline: '100',
@@ -43,39 +38,42 @@ module.exports = {
     },
     extend: {
       colors: {
-        highlight: 'hsl(var(--highlight))',
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
+        highlight: '#FF0000', // Highlight in red
+        border: '#333333', // Dark border (black-gray)
+        input: '#1A1A1A', // Blackish-gray for inputs
+        ring: '#FF4C4C', // Light red ring for focus states
+        background: {
+          DEFAULT: '#000000', // Main black background
+          light: '#1A1A1A', // Lighter black background
+        },
+        foreground: '#FF0000', // Red text foreground
         primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
+          DEFAULT: '#FF0000', // Red primary
+          foreground: '#FFFFFF', // White text on red
         },
         secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
+          DEFAULT: '#000000', // Black secondary
+          foreground: '#FF6961', // Light red text on black
         },
         destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
+          DEFAULT: '#FF4C4C', // Bright red for destructive actions
+          foreground: '#FFFFFF', // White text
         },
         muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
+          DEFAULT: '#1A1A1A', // Muted black
+          foreground: '#B20000', // Muted dark red text
         },
         accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
+          DEFAULT: '#FF4C4C', // Accent color in bright red
+          foreground: '#FFFFFF', // White text
         },
         popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
+          DEFAULT: '#0D0D0D', // Dark black for popovers
+          foreground: '#FF6961', // Light red for text
         },
         card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
+          DEFAULT: '#1A1A1A', // Blackish-gray for cards
+          foreground: '#FFFFFF', // White text
         },
       },
       borderRadius: {
@@ -98,20 +96,21 @@ module.exports = {
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
       bkg: {
-        low: '#050615',
-        med: '#090C29',
-        full: '#041C4A',
+        low: '#050505', // Deep black for low priority
+        med: '#0D0D0D', // Medium black
+        full: '#000000', // Pure black
       },
       info: {
-        primary: '#FFFFFF',
-        secondary: '#7BB2CE',
+        primary: '#FFFFFF', // White for primary info
+        secondary: '#FF6961', // Light red for secondary info
       },
       actions: {
-        primary: '#348CFD',
-        highlight: '#5ACCE6',
-        hover: 'rgba(52, 140, 253, 0.2)',
+        primary: '#FF0000', // Red for primary actions
+        highlight: '#FF4C4C', // Bright red for highlights
+        hover: 'rgba(255, 0, 0, 0.2)', // Red hover with transparency
       },
     },
   },
   plugins: [require('tailwindcss-animate')],
+  important: true, // Enable !important globally
 };

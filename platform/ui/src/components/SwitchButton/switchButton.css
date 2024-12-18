@@ -1,7 +1,30 @@
 .switch-button input:checked ~ .switch-button-outer {
-  @apply border-primary-light;
+  border-color: #ff0000; /* Red border for the outer switch when checked */
 }
+
 .switch-button input:checked ~ .switch-button-dot {
-  @apply bg-primary-light;
+  background-color: #ff0000; /* Red dot for the switch when checked */
   transform: translateX(12px);
+}
+
+.switch-button-outer {
+  background-color: #000000; /* Black background for the outer switch */
+  border: 2px solid #333333; /* Dark border for unselected state */
+  border-radius: 15px; /* Smooth rounded corners */
+  width: 30px;
+  height: 15px;
+  position: relative;
+  display: inline-block;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.switch-button-dot {
+  background-color: #333333; /* Dark gray dot for unselected state */
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.3s, background-color 0.3s;
 }

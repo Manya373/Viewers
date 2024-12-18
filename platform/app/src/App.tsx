@@ -167,6 +167,7 @@ function App({
       <BrowserRouter basename={routerBasename}>
         {authRoutes}
         {appRoutes}
+
       </BrowserRouter>
     </CombinedProviders>
   );
